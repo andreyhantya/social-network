@@ -4,5 +4,16 @@
 }
 
 .item {
-    color: white;
+    padding: 10px;
+}
+
+.item a{
+    text-align: center;
+    color: rgb(54, 40, 19);
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: rgb(249, 221, 238);
 }

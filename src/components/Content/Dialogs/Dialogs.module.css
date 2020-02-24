@@ -1,0 +1,19 @@
+.dialogWrapper{
+    display: grid;
+    grid-template-columns: 2fr 10fr ;
+    grid-template-areas: 'users dialog';
+}
+
+.users {
+    height: 100%;
+    grid-area: users;
+}
+
+.dialog {
+    grid-area: dialog;
+}
+
+
+.user {
+    grid-area: user;
+}

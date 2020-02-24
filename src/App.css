@@ -7,6 +7,10 @@
     grid-template-rows: 60px 1fr;
     grid-template-columns: 3fr 10fr;
     grid-gap: 4px;
+}
 
+.app-content {
+    background-color: #dbdbe2;
+    grid-area: c;
 }
 
