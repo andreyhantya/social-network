@@ -11,17 +11,31 @@ import Settings from "./components/Content/Settings/Settings";
 
 const App = () => {
 
+    let users = [
+        {name: 'Andrey', id: 1},
+        {name: 'Vasya', id: 2},
+        {name: 'Jorik', id: 3},
+        {name: 'Vova', id: 4},
+    ];
+    let dialogs = [
+        {message: 'Здорова, как дела?'},
+        {message: 'Нормас'},
+        {message: 'Прикольная авка'},
+        {message: 'Почему не отвечаешь?'},
+    ];
+
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-content'>
-                    <Route path="/profile" component={Profile} />
-                    <Route path="/dialogs" component={Dialogs} />
-                    <Route path="/news" component={News} />
-                    <Route path="/friends" component={Friends} />
-                    <Route path="/settings" component={Settings} />
+                    <Route path="/profile" render={ () => <Profile /> } />
+                    <Route path="/dialogs" render={ () => <Dialogs users={users} dialogs={dialogs}/> }/>
+                    <Route path="/news" render={ () => <News /> }/>
+                    <Route path="/friends" render={ () => <Friends /> }/>
+                    <Route path="/settings" render={ () => <Settings /> }/>
                 </div>
             </div>
         </BrowserRouter>
